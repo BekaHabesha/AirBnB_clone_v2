@@ -2,7 +2,7 @@
 <H1 align="center", height="1500"> <ins> 0x02. AirBnB clone - MySQL README.md File</ins> </H1>
 
 <p align="center">
-  <img src="https://i.ibb.co/9YddhVt/0x00-Air-Bn-B-clone-The-console-Alx-logo.png" />
+  <img src="https://i.ibb.co/rk7YwZq/0x02-Air-Bn-B-clone-My-SQL-Alx-logo.png" />
 </p>
 
 ###
@@ -42,6 +42,8 @@ This Team Project is part of the ALX Africa Full-Stack Software Engineer program
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
+* As a reference of [**justinmajetich**](https://github.com/justinmajetich/AirBnB_clone/tree/master)
+
 ###
 
 <H2>📮 <ins>Repository 📚Contents📝 by The Project Task</ins> 🏷 </H2>
@@ -78,20 +80,21 @@ This repository contains the initial stage of a student project to build a clone
 
 <H1> 🛠⚒ General Use 🔧⚙️ </H1>
 
-* 1. First clone this repository.
+**1. First clone this repository.**
 
-* 2. Once the repository is cloned locate the "[**console.py**](./console.py)" file and run it as follows:
+**2. Once the repository is cloned locate the "[**console.py**](./console.py)" file and run it as follows:**
 
 ```js
 /AirBnB_clone$ ./console.py
 ```
 
-* 3. When this command is run the following prompt should appear:
+**3. When this command is run the following prompt should appear:**
+
 ```js
 (hbnb)
+```
 
-
-* 4. This prompt designates you are in the "HBnB" console. There are a variety of commands available within the console program.
+**4. This prompt designates you are in the "HBnB" console. There are a variety of commands available within the console program.**
 
 ####
 
