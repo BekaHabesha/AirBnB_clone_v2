@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """ """
-import pycodestyle
-import inspect
 from tests.test_models.test_base_model import test_basemodel
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from datetime import datetime
-from os import getenv
-from time import sleep
 from unittest.mock import patch
+from time import sleep
+from os import getenv
+import pycodestyle
+import inspect
 import unittest
 storage_t = getenv("HBNB_TYPE_STORAGE")
 
@@ -68,8 +68,7 @@ class test_Amenity_BaseModel(unittest.TestCase):
                     "name",
                     "__class__"
                     ]
-            self.assertCountEqual(inst_dict.keys(),
-                                  expected_dict_attrs)
+            self.assertCountEqual(inst_dict.keys(), expected_dict_attrs)
             self.assertEqual(inst_dict['name'], 'Barbie')
             self.assertEqual(inst_dict['__class__'], 'Amenity')
 
@@ -137,9 +136,7 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue(hasattr(amenity, "updated_at"))
 
     def test_name_attr(self):
-        """Test that Amenity has attribute name,
-        and it's as an empty string
-        """
+        """Test that Amenity has attribute name, and it's as an empty string"""
         amenity = Amenity()
         self.assertTrue(hasattr(amenity, "name"))
         if storage_t == 'db':
@@ -148,9 +145,7 @@ class TestAmenity(unittest.TestCase):
             self.assertEqual(amenity.name, "")
 
     def test_to_dict_creates_dict(self):
-        """test to_dict method creates a dictionary
-        with proper attrs
-        """
+        """test to_dict method creates a dictionary with proper attrs"""
         am = Amenity()
         print(am.__dict__)
         new_d = am.to_dict()
@@ -162,9 +157,7 @@ class TestAmenity(unittest.TestCase):
         self.assertTrue("__class__" in new_d)
 
     def test_to_dict_values(self):
-        """test that values in dict returned
-        from to_dict are correct
-        """
+        """test that values in dict returned from to_dict are correct"""
         t_format = "%Y-%m-%dT%H:%M:%S.%f"
         am = Amenity()
         new_d = am.to_dict()
