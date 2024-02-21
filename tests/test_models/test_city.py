@@ -78,8 +78,7 @@ class TestCity(unittest.TestCase):
 
     def test_is_subclass_City(self):
         """test if City is subclass of Basemodel"""
-        self.assertTrue(issubclass(self.city.__class__,
-                        BaseModel), True)
+        self.assertTrue(issubclass(self.city.__class__, BaseModel), True)
 
     def test_attribute_types_City(self):
         """test attribute type for City"""
@@ -89,8 +88,7 @@ class TestCity(unittest.TestCase):
     def test_save_City(self):
         """test if the save works"""
         self.city.save()
-        self.assertNotEqual(self.city.created_at,
-                            self.city.updated_at)
+        self.assertNotEqual(self.city.created_at, self.city.updated_at)
 
     def test_to_dict_City(self):
         """test if dictionary works"""
