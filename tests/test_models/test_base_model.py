@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ """
 from models.base_model import BaseModel
+import unittest
 import datetime
+from uuid import UUID
 import json
 import os
 import pycodestyle
-import unittest
-from uuid import UUID
 
 
 class test_basemodel(unittest.TestCase):
@@ -18,8 +18,7 @@ class test_basemodel(unittest.TestCase):
         self.name = 'BaseModel'
         self.value = BaseModel
     """
-    A class to test pep8 on base_model file
-    """
+    A class to test pep8 on base_model file"""
     def test_pycodestyle(self):
         """
         Test pep8 format
@@ -100,14 +99,12 @@ class test_basemodel(unittest.TestCase):
     def test_created_at(self):
         """ """
         new = self.value()
-        self.assertEqual(type(new.created_at),
-                         datetime.datetime)
+        self.assertEqual(type(new.created_at), datetime.datetime)
 
     def test_updated_at(self):
         """ """
         new = self.value()
-        self.assertEqual(type(new.updated_at),
-                         datetime.datetime)
+        self.assertEqual(type(new.updated_at), datetime.datetime)
         n = new.to_dict()
         new = BaseModel(**n)
         self.assertFalse(new.created_at == new.updated_at)
@@ -156,10 +153,9 @@ class Test_docstrings(unittest.TestCase):
     def setup_class(self):
         """
         inspect.getmembers(object, [predicate])
-        Return all the members of an object in
-        a list of (name, value) pairs sorted
-        by name only members for which the
-        predicate returns a true value are included
+        Return all the members of an object in a list of (name, value)
+        pairs sorted by name
+        only members for which the predicate returns a true value are included
         """
         self.obj_members(BaseModel, inspect.isfunction)
 

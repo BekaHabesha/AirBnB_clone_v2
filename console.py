@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Defines the HBnB console Module."""
+""" Console Module """
 import cmd
 import sys
-from models.__init__ import storage
-from models.amenity import Amenity
 from models.base_model import BaseModel
-from models.city import City
-from models.place import Place
-from models.review import Review
-from models.state import State
+from models.__init__ import storage
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
@@ -124,7 +124,8 @@ class HBNBCommand(cmd.Cmd):
                 arg_splited = arg.split("=")
                 arg_splited[1] = eval(arg_splited[1])
                 if type(arg_splited[1]) is str:
-                    arg_splited[1] = arg_splited[1].replace("_", " ").replace('"', '\\"')
+                    arg_splited[1] = arg_splited[1].replace("_",
+				                            " ").replace('"', '\\"')
                 kw[arg_splited[0]] = arg_splited[1]
         except SyntaxError:
             print("** class name missing **")
@@ -325,6 +326,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
