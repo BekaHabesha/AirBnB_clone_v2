@@ -6,6 +6,8 @@ from fabric.api import local
 from fabric.operations import env, put, run
 
 env.hosts = ['52.86.133.162', '54.237.45.210']
+env.user = "ubuntu"
+
 
 def do_pack():
     """Generate an tgz archive from web_static folder"""
